@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BulkCopyCSV.Domain.Services
 {
-    public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
+    public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class, new()
     {
         protected IRepositoryBase<TEntity> _repositoryBase;
 
@@ -51,6 +51,11 @@ namespace BulkCopyCSV.Domain.Services
         public virtual void Update(TEntity obj)
         {
             _repositoryBase.Update(obj);
+        }
+
+        public void BulkCopy(string filePath)
+        {
+            _repositoryBase.BulkCopy<TEntity>(filePath);
         }
     }
 }

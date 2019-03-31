@@ -46,9 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Movies.cs" />
+    <Compile Include="Interfaces\IRepositories\IMoviesRepository.cs" />
+    <Compile Include="Interfaces\IServices\IMoviesService.cs" />
     <Compile Include="Interfaces\IServices\IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\IRepositories\IRepositoryBase.cs" />
+    <Compile Include="Services\MoviesService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup />

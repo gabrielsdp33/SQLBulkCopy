@@ -15,5 +15,6 @@ namespace BulkCopyCSV.Domain.Repositories
         void Remove(TEntity obj);
         IEnumerable<TEntity> GetByFilter(System.Linq.Expressions.Expression<Func<TEntity, bool>> lambda);
         int Save();
+        void BulkCopy<T>(string filePath) where T : class, new();
     }
 }

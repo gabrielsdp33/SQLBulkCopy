@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Context\ContextModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\MoviesRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>

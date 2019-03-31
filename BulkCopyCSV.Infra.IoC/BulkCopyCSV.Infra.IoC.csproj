@@ -50,5 +50,19 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BulkCopyCSV.Application\BulkCopyCSV.Application.csproj">
+      <Project>{75d10bda-d219-49ed-b7bc-c8e6578a3db0}</Project>
+      <Name>BulkCopyCSV.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BulkCopyCSV.Domain\BulkCopyCSV.Domain.csproj">
+      <Project>{d041748b-fca7-4021-ab11-89924642aa01}</Project>
+      <Name>BulkCopyCSV.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BulkCopyCSV.Infra.Data\BulkCopyCSV.Infra.Data.csproj">
+      <Project>{fd4f538b-2453-45d4-9bff-a1f8645a1550}</Project>
+      <Name>BulkCopyCSV.Infra.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

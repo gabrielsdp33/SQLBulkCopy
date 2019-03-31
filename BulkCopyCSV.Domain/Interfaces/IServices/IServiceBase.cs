@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BulkCopyCSV.Domain.Interfaces.IServices
 {
     public interface IServiceBase<TEntity> where TEntity : class
-    {
+    { 
         void Add(TEntity obj);
         TEntity GetById(Guid obj);
         IEnumerable<TEntity> GetAll();
@@ -16,5 +16,6 @@ namespace BulkCopyCSV.Domain.Interfaces.IServices
         void Remove(TEntity obj);
         IEnumerable<TEntity> GetByFilter(Expression<Func<TEntity, bool>> lambda);
         int Save();
+        void BulkCopy(string filePath);
     }
 }
