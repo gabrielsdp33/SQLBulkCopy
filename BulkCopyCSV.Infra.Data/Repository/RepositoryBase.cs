@@ -95,7 +95,7 @@ namespace BulkCopyCSV.Infra.Data.Repository
                 conn.Open();
 
                 OleDbCommand command = new OleDbCommand(query, conn);
-                var reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
 
                 var destConnection = (SqlConnection)_context.Database.Connection;
